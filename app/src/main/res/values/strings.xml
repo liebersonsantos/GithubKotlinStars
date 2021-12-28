@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">GithubKotlinStars</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</string>
+    <string name="check_your_internet">Check your internet connection and try again.</string>
+    <string name="internet">Internet</string>
+    <string name="ok">Ok</string>
+    <string name="connection_error">Connection error!</string>
+
+</resources>
