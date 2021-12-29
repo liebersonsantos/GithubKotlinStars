@@ -63,6 +63,7 @@ class HomeFragment : BaseFragment() {
                 Status.SUCCESS ->{
                     it.data?.let { data ->
                         domainList.addAll(data)
+                        viewModel.putCache(domainList)
                         setFlipper(domainList)
                         homeAdapter.submitList(domainList)
                         binding.spLayout.isRefreshing = false

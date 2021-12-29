@@ -50,7 +50,6 @@ class HomeViewModel @Inject constructor(
                 val response = withContext(ioDispatcher) {
                     getRepositoriesUseCase.invoke(language, sort, page)
                 }
-                putCacheUseCase.invoke(CACHE_REPOSITORY, response)
                 _repositories.value = State.success(response)
                 _loading.value = false
             } catch (e: Exception) {
@@ -58,6 +57,10 @@ class HomeViewModel @Inject constructor(
                 _loading.value = false
             }
         }
+
+    fun putCache(response: MutableList<RepositoryDomain>) {
+        putCacheUseCase.invoke(CACHE_REPOSITORY, response)
+    }
 
     fun getCacheRepositories(key: String) =
         try {
